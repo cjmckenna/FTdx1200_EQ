@@ -199,11 +199,13 @@ def eq_on():
     print("EQ ON")
     eq_on_button.config(highlightbackground='#4ca64c')
     eq_on_button.config(text='EQ IS ON')
+    ser.write(b'pr12;')
 
 def eq_off():
     print("EQ OFF")
     eq_on_button.config(highlightbackground='#FFFFFF')
     eq_on_button.config(text='TURN EQ ON')
+    ser.write(b'pr11;')
 
 textbox = LabelFrame(master, text=" Yaesu FTdx-1200 EQ Utility ", font=('courier', 15, 'bold'))
 textbox.grid(row=0, column=20)
