@@ -56,8 +56,8 @@ eq3_frequency_cat_values = {'00': '00', '1500': '01', '1600': '02', '1700': '03'
 eq_level_cat_values = {'-20': '-20', '-19': '-19', '-18': '-18', '-17': '-17', '-16': '-16', '-15': '-15',
                 '-14': '-14', '-13': '-13', '-12': '-12', '-11': '-11', '-10': '-10', '-9': '-09',
                 '-8': '-08', '-7': '-07', '-6': '-06', '-5': '-05', '-4': '-04', '-3': '-03',
-                '-2': '-02', '-1': '-01', '00': '+00', '01': '01', '02': '02', '03': '03', '04': '04',
-                '05': '05', '06': '06', '07': '07', '08': '08', '09': '09', '10': '10'}
+                '-2': '-02', '-1': '-01', '00': '+00', '01': '+01', '02': '+02', '03': '+03', '04': '+04',
+                '05': '+05', '06': '+06', '07': '+07', '08': '+08', '09': '+09', '10': '+10'}
 
 # this will assign the values for the frequency sliders for each EQ because of the jump from
 # zero to the first value makes it so we can't just assign the values in the slider itself.
@@ -80,16 +80,25 @@ def poff_set_eq1_frequency(value):
     txt = str(poff_eq1_frequency.get())
     newval = txt.zfill(2)
     print("Slider Value: ", txt, "New Value: ", eq1_frequency_cat_values[newval])
+    concatval = "b""'EX159" + eq1_frequency_cat_values[newval] + ";'"
+    #ser,write(concatval)
+    print(concatval)
 
 def poff_set_eq1_level(value):
     txt = str(poff_eq1_level.get())
     newval = txt.zfill(2)
     print("Slider Value: ", txt, "New Value: ", eq_level_cat_values[newval])
+    concatval = "b""'EX160" + eq_level_cat_values[newval] + ";'"
+    #ser,write(concatval)
+    print(concatval)
 
 def poff_set_eq1_bandw(value):
     txt = str(poff_eq1_bandw.get())
     newval = txt.zfill(2)
     print(newval)
+    concatval = "b""'EX161" + newval + ";'"
+    print(concatval)
+
 
 def poff_set_eq2_frequency(value):
     poff_eq2_frequency_newval = min(eq2_frequency_slider_values, key=lambda x:abs(x-float(value)))
