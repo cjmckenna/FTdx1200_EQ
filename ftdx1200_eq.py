@@ -184,11 +184,13 @@ def proc_on():
     print("PROC ON")
     proc_on_button.config(highlightbackground='#4ca64c')
     proc_on_button.config(text='PROC IS ON')
+    ser.write(b'pr02;')
 
 def proc_off():
     print("PROC OFF")
     proc_on_button.config(highlightbackground='#FFFFFF')
     proc_on_button.config(text='TURN PROC ON')
+    ser.write(b'pr01;')
 
 # commands to turn the EQ on and off
 
