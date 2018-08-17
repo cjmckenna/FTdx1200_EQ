@@ -106,16 +106,24 @@ def poff_set_eq2_frequency(value):
     txt = str(poff_eq2_frequency.get())
     newval = txt.zfill(2)
     print("Slider Value: ", txt, "New Value: ", eq2_frequency_cat_values[newval])
+    concatval = "b""'EX162" + eq2_frequency_cat_values[newval] + ";'"
+    #ser,write(concatval)
+    print(concatval)
 
 def poff_set_eq2_level(value):
     txt = str(poff_eq2_level.get())
     newval = txt.zfill(2)
     print("Slider Value: ", txt, "New Value: ", eq_level_cat_values[newval])
+    concatval = "b""'EX163" + eq_level_cat_values[newval] + ";'"
+    #ser,write(concatval)
+    print(concatval)
 
 def poff_set_eq2_bandw(value):
     txt = str(poff_eq2_bandw.get())
     newval = txt.zfill(2)
     print(newval)
+    concatval = "b""'EX164" + newval + ";'"
+    print(concatval)
 
 def poff_set_eq3_frequency(value):
     poff_eq3_frequency_newval = min(eq3_frequency_slider_values, key=lambda x:abs(x-float(value)))
@@ -123,16 +131,24 @@ def poff_set_eq3_frequency(value):
     txt = str(poff_eq3_frequency.get())
     newval = txt.zfill(2)
     print("Slider Value: ", txt, "New Value: ", eq3_frequency_cat_values[newval])
+    concatval = "b""'EX165" + eq3_frequency_cat_values[newval] + ";'"
+    #ser,write(concatval)
+    print(concatval)
 
 def poff_set_eq3_level(value):
     txt = str(poff_eq3_level.get())
     newval = txt.zfill(2)
     print("Slider Value: ", txt, "New Value: ", eq_level_cat_values[newval])
+    concatval = "b""'EX166" + eq_level_cat_values[newval] + ";'"
+    #ser,write(concatval)
+    print(concatval)
 
 def poff_set_eq3_bandw(value):
     txt = str(poff_eq3_bandw.get())
     newval = txt.zfill(2)
     print(newval)
+    concatval = "b""'EX167" + newval + ";'"
+    print(concatval)
 
 # update the settings for each EQ for the processor ON. Menu items 168 to 176
 
