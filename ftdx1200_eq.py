@@ -2,8 +2,8 @@ from tkinter import *
 import serial
 
 ser = serial.Serial()
-ser.baudrate = 19200
-ser.port = '/dev/cu.Bluetooth-Incoming-Port'
+ser.baudrate = 38400
+ser.port = 'COM1'
 ser
 
 master = Tk()
@@ -239,13 +239,13 @@ def proc_on():
     print("PROC ON")
     proc_on_button.config(highlightbackground='#4ca64c')
     proc_on_button.config(text='PROC IS ON')
-    ser.write(b'pr02;')
+    ser.write(b'pr01;')
 
 def proc_off():
     print("PROC OFF")
     proc_on_button.config(highlightbackground='#FFFFFF')
     proc_on_button.config(text='TURN PROC ON')
-    ser.write(b'pr01;')
+    ser.write(b'pr00;')
 
 # commands to turn the EQ on and off
 
@@ -254,13 +254,13 @@ def eq_on():
     print("EQ ON")
     eq_on_button.config(highlightbackground='#4ca64c')
     eq_on_button.config(text='EQ IS ON')
-    ser.write(b'pr12;')
+    ser.write(b'pr11;')
 
 def eq_off():
     print("EQ OFF")
     eq_on_button.config(highlightbackground='#FFFFFF')
     eq_on_button.config(text='TURN EQ ON')
-    ser.write(b'pr11;')
+    ser.write(b'pr10;')
 
 textbox = LabelFrame(master, text=" Yaesu FTdx-1200 EQ Utility ", font=('courier', 15, 'bold'))
 textbox.grid(row=0, column=20)
