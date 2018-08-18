@@ -8,6 +8,8 @@ ser
 
 master = Tk()
 
+master.title("Yaesu FTdx-1200 EQ Utility")
+
 def open_serial():
     ser.open()
     print(ser.is_open)
@@ -88,16 +90,16 @@ def poff_set_eq1_level(value):
     txt = str(poff_eq1_level.get())
     newval = txt.zfill(2)
     print("Slider Value: ", txt, "New Value: ", eq_level_cat_values[newval])
-    concatval = "b""'EX160" + eq_level_cat_values[newval] + ";'"
-    ser.write(concatval)
+    concatval = 'EX160' + eq_level_cat_values[newval] + ';'
+    ser.write(concatval.encode())
     print(concatval)
 
 def poff_set_eq1_bandw(value):
     txt = str(poff_eq1_bandw.get())
     newval = txt.zfill(2)
     print(newval)
-    concatval = "b""'EX161" + newval + ";'"
-    ser.write(concatval)
+    concatval = 'EX161' + newval + ';'
+    ser.write(concatval.encode())
     print(concatval)
 
 
@@ -107,24 +109,24 @@ def poff_set_eq2_frequency(value):
     txt = str(poff_eq2_frequency.get())
     newval = txt.zfill(2)
     print("Slider Value: ", txt, "New Value: ", eq2_frequency_cat_values[newval])
-    concatval = "b""'EX162" + eq2_frequency_cat_values[newval] + ";'"
-    ser.write(concatval)
+    concatval = 'EX162' + eq2_frequency_cat_values[newval] + ';'
+    ser.write(concatval.encode())
     print(concatval)
 
 def poff_set_eq2_level(value):
     txt = str(poff_eq2_level.get())
     newval = txt.zfill(2)
     print("Slider Value: ", txt, "New Value: ", eq_level_cat_values[newval])
-    concatval = "b""'EX163" + eq_level_cat_values[newval] + ";'"
-    ser.write(concatval)
+    concatval = 'EX163' + eq_level_cat_values[newval] + ';'
+    ser.write(concatval.encode())
     print(concatval)
 
 def poff_set_eq2_bandw(value):
     txt = str(poff_eq2_bandw.get())
     newval = txt.zfill(2)
     print(newval)
-    concatval = "b""'EX164" + newval + ";'"
-    ser.write(concatval)
+    concatval = 'EX164' + newval + ';'
+    ser.write(concatval.encode())
     print(concatval)
 
 def poff_set_eq3_frequency(value):
@@ -133,24 +135,24 @@ def poff_set_eq3_frequency(value):
     txt = str(poff_eq3_frequency.get())
     newval = txt.zfill(2)
     print("Slider Value: ", txt, "New Value: ", eq3_frequency_cat_values[newval])
-    concatval = "b""'EX165" + eq3_frequency_cat_values[newval] + ";'"
-    ser.write(concatval)
+    concatval = 'EX165' + eq3_frequency_cat_values[newval] + ';'
+    ser.write(concatval.encode())
     print(concatval)
 
 def poff_set_eq3_level(value):
     txt = str(poff_eq3_level.get())
     newval = txt.zfill(2)
     print("Slider Value: ", txt, "New Value: ", eq_level_cat_values[newval])
-    concatval = "b""'EX166" + eq_level_cat_values[newval] + ";'"
-    ser.write(concatval)
+    concatval = 'EX166' + eq_level_cat_values[newval] + ';'
+    ser.write(concatval.encode())
     print(concatval)
 
 def poff_set_eq3_bandw(value):
     txt = str(poff_eq3_bandw.get())
     newval = txt.zfill(2)
     print(newval)
-    concatval = "b""'EX167" + newval + ";'"
-    ser.write(concatval)
+    concatval = 'EX167' + newval + ';'
+    ser.write(concatval.encode())
     print(concatval)
 
 # update the settings for each EQ for the processor ON. Menu items 168 to 176
@@ -161,24 +163,24 @@ def pon_set_eq1_frequency(value):
     txt = str(pon_eq1_frequency.get())
     newval = txt.zfill(2)
     print("Slider Value: ", txt, "New Value: ", eq1_frequency_cat_values[newval])
-    concatval = "b""'EX168" + eq1_frequency_cat_values[newval] + ";'"
-    ser.write(concatval)
+    concatval = 'EX168' + eq1_frequency_cat_values[newval] + ';'
+    ser.write(concatval.encode())
     print(concatval)
 
 def pon_set_eq1_level(value):
     txt = str(pon_eq1_level.get())
     newval = txt.zfill(2)
     print("Slider Value: ", txt, "New Value: ", eq_level_cat_values[newval])
-    concatval = "b""'EX169" + eq_level_cat_values[newval] + ";'"
-    ser.write(concatval)
+    concatval = 'EX169' + eq_level_cat_values[newval] + ';'
+    ser.write(concatval.encode())
     print(concatval)
 
 def pon_set_eq1_bandw(value):
     txt = str(pon_eq1_bandw.get())
     newval = txt.zfill(2)
     print(newval)
-    concatval = "b""'EX170" + newval + ";'"
-    ser.write(concatval)
+    concatval = 'EX170' + newval + ';'
+    ser.write(concatval.encode())
     print(concatval)
 
 def pon_set_eq2_frequency(value):
@@ -187,24 +189,24 @@ def pon_set_eq2_frequency(value):
     txt = str(pon_eq2_frequency.get())
     newval = txt.zfill(2)
     print("Slider Value: ", txt, "New Value: ", eq2_frequency_cat_values[newval])
-    concatval = "b""'EX171" + eq2_frequency_cat_values[newval] + ";'"
-    ser.write(concatval)
+    concatval = 'EX171' + eq2_frequency_cat_values[newval] + ';'
+    ser.write(concatval.encode())
     print(concatval)
 
 def pon_set_eq2_level(value):
     txt = str(pon_eq2_level.get())
     newval = txt.zfill(2)
     print("Slider Value: ", txt, "New Value: ", eq_level_cat_values[newval])
-    concatval = "b""'EX172" + eq_level_cat_values[newval] + ";'"
-    ser.write(concatval)
+    concatval = 'EX172' + eq_level_cat_values[newval] + ';'
+    ser.write(concatval.encode())
     print(concatval)
 
 def pon_set_eq2_bandw(value):
     txt = str(pon_eq2_bandw.get())
     newval = txt.zfill(2)
     print(newval)
-    concatval = "b""'EX173" + newval + ";'"
-    ser.write(concatval)
+    concatval = 'EX173' + newval + ';'
+    ser.write(concatval.encode())
     print(concatval)
 
 def pon_set_eq3_frequency(value):
@@ -213,24 +215,24 @@ def pon_set_eq3_frequency(value):
     txt = str(pon_eq3_frequency.get())
     newval = txt.zfill(2)
     print("Slider Value: ", txt, "New Value: ", eq3_frequency_cat_values[newval])
-    concatval = "b""'EX174" + eq3_frequency_cat_values[newval] + ";'"
-    ser.write(concatval)
+    concatval = 'EX174' + eq3_frequency_cat_values[newval] + ';'
+    ser.write(concatval.encode())
     print(concatval)
 
 def pon_set_eq3_level(value):
     txt = str(pon_eq3_level.get())
     newval = txt.zfill(2)
     print("Slider Value: ", txt, "New Value: ", eq_level_cat_values[newval])
-    concatval = "b""'EX175" + eq_level_cat_values[newval] + ";'"
-    ser.write(concatval)
+    concatval = 'EX175' + eq_level_cat_values[newval] + ';'
+    ser.write(concatval.encode())
     print(concatval)
 
 def pon_set_eq3_bandw(value):
     txt = str(pon_eq3_bandw.get())
     newval = txt.zfill(2)
     print(newval)
-    concatval = "b""'EX176" + newval + ";'"
-    ser.write(concatval)
+    concatval = 'EX176' + newval + ';'
+    ser.write(concatval.encode())
     print(concatval)
 
 # commands to turn proc on and off
