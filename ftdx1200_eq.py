@@ -1,17 +1,14 @@
 from tkinter import *
 import serial
 
-#############################################################################################
-# USER MUST EDIT THE COM PORT SETTINGS TO MATCH THEIR CONFIG
-# THIS WILL BE REPLACED WITH ABILITY TO SET FROM UI SOON
+####################################################################
+# USER MUST CHANGE SERIAL PORT SETTINGS BELOW TO MACTH THEIR SETUP
 
 ser = serial.Serial()
 ser.baudrate = 38400
-
-##############################################################################################
-
 ser.port = 'COM1'
-ser
+
+#####################################################################
 
 master = Tk()
 
