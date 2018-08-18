@@ -80,8 +80,8 @@ def poff_set_eq1_frequency(value):
     txt = str(poff_eq1_frequency.get())
     newval = txt.zfill(2)
     print("Slider Value: ", txt, "New Value: ", eq1_frequency_cat_values[newval])
-    concatval = "b""'EX159" + eq1_frequency_cat_values[newval] + ";'"
-    ser.write(concatval)
+    concatval = 'EX159' + eq1_frequency_cat_values[newval] + ';'
+    ser.write(concatval.encode())
     print(concatval)
 
 def poff_set_eq1_level(value):
