@@ -3,8 +3,9 @@ This utility is designed to allow easy configuration of the EQ setting on the Ya
 
 Controls are provided for both sets of EQ (proc on and proc off) and the user can selectivly turn the proc and EQ on and off to gauge the impact of the changes.
 
-This should run on both Windows and MAC OSX and I have tested on both of them.
+This repository contains a windows executable (ftdx1200_eq.exe) as well as an installer for MacOS (FTDX1200EQ.pkg)
+Download the file that matches your system
 
-This utility requires python 3.x with pyserial and tkinter.
+Since these are self contained executables you do not need to have python on your system.
 
-Currently it is just the script but I hope to deliver both a Windows and Mac compiled executable soon.  Till then you will need to have python installed on your computer.
+The program has selections at the bottom for setting your com port and baud rate.  Set these up bfore connecting to the radio with the connect button
