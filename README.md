@@ -7,6 +7,7 @@ This repository contains a windows executable (ftdx1200_eq.exe) as well as an in
 the source is available in the ftdx1200_eq.py file
 Download the file that matches your system
 
-Since these are self contained executables you do not need to have python on your system.
+Since these are self contained executables you do not need to have python on your system unless you want to work with the source file.
+If you wish to use the source or edit it in anyway, you will need python 3 as well as the tkinter and serial packages.
 
 The program has selections at the bottom for setting your com port and baud rate.  Set these up before connecting to the radio with the connect button
