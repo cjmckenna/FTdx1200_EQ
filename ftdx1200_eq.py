@@ -4,7 +4,6 @@ import serial
 import sys
 import glob
 import time
-import time
 
 ser = serial.Serial(timeout=.01)
 
@@ -33,7 +32,7 @@ def serial_ports():
         :returns:
             A list of the serial ports available on the system
     """
-    if sys.platform.startswith('win'):
+    if sys.platform('win32'):
         ports = ['COM%s' % (i + 1) for i in range(256)]
     elif sys.platform.startswith('linux') or sys.platform.startswith('cygwin'):
         # this excludes your current terminal "/dev/tty"
